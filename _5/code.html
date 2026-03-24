@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>个人档案 - 蕲春物语</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#8fbc8f",
+              "surface-tint": "#3e6842",
+              "on-background": "#221b0f",
+              "primary": "#3e6842",
+              "tertiary": "#874d5f",
+              "surface-container-high": "#f5e6d2",
+              "surface-container": "#fbecd8",
+              "surface-container-low": "#fff2e1",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#fff8f3",
+              "on-surface": "#221b0f",
+              "on-surface-variant": "#424940",
+              "outline-variant": "#c2c9be",
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .parchment-texture {
+            background-color: #fff8f3;
+            background-image: radial-gradient(#efe0cd 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .brush-underline {
+            position: relative;
+        }
+        .brush-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: currentColor;
+            mask: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' stroke='black' fill='transparent'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface parchment-texture min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff8f3]/80 dark:bg-stone-900/80 backdrop-blur-md">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#3e6842] cursor-pointer" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-headline text-lg font-bold text-[#3e6842]">个人档案</h1>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#3e6842]" data-icon="settings">settings</span>
+</div>
+</div>
+</header>
+<main class="pt-24 px-8 space-y-8 max-w-2xl mx-auto">
+<!-- Header Section: User Card -->
+<section class="relative">
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 shadow-[0_20px_50px_rgba(62,104,66,0.08)] flex flex-col md:flex-row items-center gap-6 border-b-4 border-primary-container/20">
+<div class="relative">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-primary-container p-1 bg-white">
+<img alt="User Avatar" class="w-full h-full object-cover rounded-full" data-alt="Q-style hand-drawn character illustration avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPoMgquv3u5P3luuFecAdKn4kE1_nRpUvpJTI2zdrEAvOSw0FRtCmQ8NlfTIWtIgCHf5q-G4h1mvcatANmamrB7V1bidvsGR7PyFYaeo5ZVhE1_MwQqr91VZBo26DoQ8fWa5Fp5pLJQjpnm2updTvvvgW3vO_ui3xfSqaKiKOC8nXOUX6jnNJmCyO3D11p1pn0kNWzMSLiToJhNsrEMm6Fe1uxNUA6oe1LtRfxGLd5KPqS9m1AXkDfbGMlbanzfAoY1G4Gvm_ETXwR"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-tertiary text-white text-[10px] px-2 py-1 rounded-full font-headline italic">12级</div>
+</div>
+<div class="text-center md:text-left flex-1">
+<h2 class="font-headline text-2xl font-bold text-on-surface">蕲春漫游者</h2>
+<div class="flex flex-wrap justify-center md:justify-start gap-2 mt-2">
+<span class="bg-primary-container/20 text-primary text-xs px-3 py-1 rounded-full font-semibold border border-primary/10">蕲春专家</span>
+<span class="bg-surface-container-high text-on-surface-variant text-xs px-3 py-1 rounded-full flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>探索积分: 1280</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Section -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h3 class="font-headline text-xl font-bold brush-underline">我的成就</h3>
+<span class="text-primary text-sm font-semibold">查看全部</span>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<!-- Achievement 1 -->
+<div class="flex-shrink-0 w-32 bg-gradient-to-b from-yellow-50 to-white p-4 rounded-2xl border border-yellow-200 shadow-sm flex flex-col items-center text-center gap-2 animate-pulse-slow">
+<div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600">
+<span class="material-symbols-outlined text-4xl" data-icon="guardian" style="font-variation-settings: 'FILL' 1;">guardian</span>
+</div>
+<span class="font-headline text-[11px] leading-tight font-bold">非遗守护者</span>
+</div>
+<!-- Achievement 2 -->
+<div class="flex-shrink-0 w-32 bg-surface-container-low p-4 rounded-2xl border border-outline-variant/20 flex flex-col items-center text-center gap-2">
+<div class="w-16 h-16 bg-primary-container/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="herbal_medicine">medication</span>
+</div>
+<span class="font-headline text-[11px] leading-tight font-bold">艾草鉴赏家</span>
+</div>
+<!-- Achievement 3 (Placeholder) -->
+<div class="flex-shrink-0 w-32 bg-surface-container-low p-4 rounded-2xl border border-outline-variant/20 flex flex-col items-center text-center gap-2 opacity-50">
+<div class="w-16 h-16 bg-stone-200 rounded-full flex items-center justify-center text-stone-400">
+<span class="material-symbols-outlined text-4xl" data-icon="lock">lock</span>
+</div>
+<span class="font-headline text-[11px] leading-tight font-bold">Nature Pathmaker</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid for Collectibles & Journal -->
+<section class="space-y-4">
+<h3 class="font-headline text-xl font-bold brush-underline">藏品与游记</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Digital Portrait -->
+<div class="bg-surface-container p-4 rounded-3xl space-y-3 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<img class="w-full h-32 object-cover rounded-2xl group-hover:scale-105 transition-transform" data-alt="Traditional Chinese portrait of Li Shizhen illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1tTG49JfR7cwz1kD9aXSZZVRoAJ9-9w_wXAJ2mkcULnie8bA6ZaL1k5sGcZFPIzcKGti0YX4zIQ2Yxw8UGPozyJg9VoElQgmZFULBNJ_h4qIWCUAH2WDfteXYePGkI6_42gboHjU3YLsjTgmqRKHnQjK0W35tkEDKRBy8zCvmj0iwJoBGY6B-1ClSgRNOa6Gm6juzcbXxOB91bwEHEXJm9Zhe8-i3vn0mi66DSHOuSXXJJ0-cvPVOuCfQyHOImMXfZs7IUXIGXidQ"/>
+<div>
+<p class="font-headline font-bold text-sm">李时珍数字画像</p>
+<p class="text-[10px] text-on-surface-variant">限量版 #0823</p>
+</div>
+</div>
+<!-- Travel Journal -->
+<div class="bg-primary-container/10 p-4 rounded-3xl flex flex-col justify-between border-dashed border-2 border-primary-container/30">
+<div class="space-y-1">
+<p class="font-headline font-bold text-sm">漫游日记</p>
+<p class="text-[10px] text-on-surface-variant italic">12 本月条目</p>
+</div>
+<div class="flex -space-x-2 mt-4">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-xs" data-icon="photo">photo</span>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-xs" data-icon="edit_note">edit_note</span>
+</div>
+</div>
+<button class="mt-4 w-full bg-primary text-white text-xs py-2 rounded-full font-bold">开启日记</button>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="space-y-4">
+<h3 class="font-headline text-xl font-bold brush-underline">服务</h3>
+<div class="grid grid-cols-1 gap-3">
+<!-- My Orders -->
+<div class="bg-surface-container-low p-5 rounded-2xl flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<span class="font-headline font-bold">我的订单</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Coupon Pack -->
+<div class="bg-surface-container-low p-5 rounded-2xl flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold">优惠券包</span>
+<span class="text-[10px] text-tertiary font-bold">3 件即将过期</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Leaderboard -->
+<div class="bg-primary/5 p-5 rounded-2xl flex items-center justify-between border border-primary/10 hover:bg-primary/10 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+</div>
+<span class="font-headline font-bold">助农排行榜</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-xs font-bold text-primary">排名 42</span>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div id="common-bottom-nav"></div>
+<script src="../components/bottom-nav.js"></script>
+<script>
+  window.renderBottomNav("#common-bottom-nav", "mine");
+
+  const backIcon = document.querySelector("header [data-icon='arrow_back']");
+  if (backIcon) {
+    backIcon.addEventListener("click", () => {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "../_1/code.html";
+      }
+    });
+  }
+</script>
+</body></html>

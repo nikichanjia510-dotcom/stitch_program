@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="light" lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商品详情 - 蕲艾市集</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+    body { min-height: max(884px, 100dvh); }
+  </style>
+</head>
+<body class="bg-[#fff8f3] text-[#221b0f] font-['Manrope'] pb-32">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fff8f3]/85 backdrop-blur-md shadow-[0_4px_20px_-2px_rgba(62,104,66,0.05)]">
+    <div class="h-16 px-6 flex items-center justify-between">
+      <button id="back-btn" class="w-10 h-10 rounded-full text-[#3e6842] hover:bg-[#3e6842]/10 flex items-center justify-center">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+      <h1 class="font-['Noto_Serif_SC'] font-bold text-lg text-[#3e6842]">商品详情</h1>
+      <span class="w-10 h-10"></span>
+    </div>
+  </header>
+
+  <main class="pt-20 px-6 max-w-3xl mx-auto">
+    <section class="bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-[0_8px_20px_-4px_rgba(62,104,66,0.08)] border border-white/50">
+      <img id="product-image" class="w-full aspect-square object-cover rounded-2xl" alt="商品图" src="" />
+    </section>
+
+    <section class="mt-6 bg-white/70 rounded-3xl p-6 border border-[#3e6842]/10">
+      <h2 id="product-name" class="font-['Noto_Serif_SC'] text-2xl font-bold text-[#221b0f]">商品名称</h2>
+      <div class="mt-4 flex items-center gap-3">
+        <span id="product-original-price" class="text-sm text-[#727970] line-through">¥0.0</span>
+        <span id="product-coupon-price" class="text-base font-bold text-[#874d5f] bg-[#e49db1]/20 px-3 py-1 rounded-lg">券后 ¥0.0</span>
+      </div>
+      <p class="mt-5 text-sm text-[#424940] leading-relaxed">精选蕲春道地好物，甄选传统工艺与现代美学融合，让每一份艾香都可感可用。</p>
+    </section>
+  </main>
+
+  <div class="fixed bottom-0 left-0 right-0 z-50 px-6 pb-6 pt-4 bg-[#fff8f3]/90 backdrop-blur-xl border-t border-[#3e6842]/10">
+    <div class="max-w-3xl mx-auto flex items-center gap-3">
+      <button class="w-12 h-12 rounded-xl border border-[#3e6842]/20 bg-white text-[#3e6842] flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+      </button>
+      <button id="buy-now-btn" class="flex-1 h-12 rounded-xl bg-[#3e6842] text-white font-bold text-base shadow-md active:scale-[0.98] transition-transform" type="button">立即购买</button>
+    </div>
+  </div>
+
+  <script>
+    const defaultProduct = {
+      name: "三年陈艾柱",
+      originalPrice: 158,
+      couponPrice: 102.4,
+      imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8uP4xlm-m3Y86f5we3XZMBFt3Y_q0PjkotwoP8kUtTntZ95e7SZWdnCLYILF6WRUpRTLnkYlnJ0OwomxF05f6VaJRi7DyjJ7h7wFvrlU1enCWJ5MPwFcf8swg9OoXWo_TZzdUcRMQdt9YmRXjDqHMY7YLfI1XWPRlSpYu2kRi3bjPA6san6Egkx4GAJ-hO09lWQ6vW8NeI4QVGNUpxA7hyOL8VCBf-HapEFCZ4AFsqjH1RMAWPqv0QFqwIH7DNrxexY4IsO6A4Jve",
+      alt: "Aged Mugwort Pillars",
+    };
+
+    let product = defaultProduct;
+    try {
+      const raw = sessionStorage.getItem("selectedMarketProduct");
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && parsed.name && parsed.imageSrc) product = parsed;
+      }
+    } catch (error) {}
+
+    document.getElementById("product-image").src = product.imageSrc;
+    document.getElementById("product-image").alt = product.alt || product.name;
+    document.getElementById("product-name").textContent = product.name;
+    document.getElementById("product-original-price").textContent = `¥${Number(product.originalPrice).toFixed(1)}`;
+    document.getElementById("product-coupon-price").textContent = `券后 ¥${Number(product.couponPrice).toFixed(1)}`;
+
+    document.getElementById("back-btn").addEventListener("click", () => {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "./code.html";
+      }
+    });
+
+    document.getElementById("buy-now-btn").addEventListener("click", () => {
+      window.location.href = "../order_confirmation/code.html";
+    });
+  </script>
+</body>
+</html>

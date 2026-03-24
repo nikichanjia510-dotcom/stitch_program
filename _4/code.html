@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>乡遇蕲春 - 蕲艾市集</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#c6e9e9",
+              "surface-container-low": "#fff2e1",
+              "inverse-on-surface": "#feefdb",
+              "on-tertiary-fixed-variant": "#6c3647",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#683344",
+              "secondary": "#446464",
+              "on-secondary-fixed": "#002020",
+              "inverse-primary": "#a4d2a4",
+              "on-background": "#221b0f",
+              "primary": "#3e6842",
+              "surface-dim": "#e6d8c5",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#fcb2c7",
+              "surface-container": "#fbecd8",
+              "primary-fixed-dim": "#a4d2a4",
+              "on-primary-fixed": "#002107",
+              "tertiary-fixed": "#ffd9e2",
+              "on-error-container": "#93000a",
+              "outline-variant": "#c2c9be",
+              "on-primary-container": "#234c29",
+              "tertiary-container": "#e49db1",
+              "tertiary": "#874d5f",
+              "on-tertiary-fixed": "#370b1c",
+              "on-surface-variant": "#424940",
+              "secondary-fixed": "#c6e9e9",
+              "primary-container": "#8fbc8f",
+              "on-surface": "#221b0f",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#372f22",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#abcdcd",
+              "primary-fixed": "#bfefbe",
+              "surface-variant": "#efe0cd",
+              "surface-container-high": "#f5e6d2",
+              "surface-container-highest": "#efe0cd",
+              "background": "#fff8f3",
+              "on-secondary-fixed-variant": "#2c4c4c",
+              "on-primary-fixed-variant": "#274f2c",
+              "outline": "#727970",
+              "on-secondary-container": "#4a6a6a",
+              "surface-bright": "#fff8f3",
+              "surface": "#fff8f3",
+              "surface-tint": "#3e6842"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif SC", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC7HluscPM-Xui_BHVB8Z1jMB_rOteJQfILOnk9bN44GrzDoCwsOpN92ELYN6hyFwLf_lmVAfx93vfHrjiWO6vzPuFAQ87ge3Ah2I_zVorSKczMsTjkcVdgaTQxdgbqRM5zwKnGDXEEom12pWKIawvvHTAt7oXmAHkJYW5cQYvoz0qiQ_SlHCKNxu7q7vx2sOuMARh1EHkUV9iU7Qd_rNqRO3oqVT0olb9VzF6oJkxzmmbOfIYwSz7GhsChCoxBK-XljE8D-dflG_Jf);
+    background-repeat: repeat
+    }
+.chinese-border-bottom {
+    background-image: linear-gradient(to right, transparent, #3e6842 50%, transparent);
+    height: 1px;
+    width: 100%;
+    opacity: 0.2
+    }
+.organic-radius {
+    border-radius: 2rem 1rem 2.5rem 1rem
+    }
+.brush-underline {
+    position: relative
+    }
+.brush-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #8fbc8f;
+    opacity: 0.4;
+    border-radius: 50%;
+    filter: blur(1px)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body text-on-surface paper-texture min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff8f3]/80 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full shadow-[0_4px_20px_-2px_rgba(62,104,66,0.05)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+<h1 class="font-headline font-bold text-lg tracking-wide text-on-background">蕲艾市集</h1>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">search</span>
+</div>
+</header>
+<main class="pt-20 px-6">
+<!-- Search Bar -->
+<section class="mb-6">
+<div class="relative flex items-center bg-surface-container-low rounded-full px-5 py-3 shadow-sm group">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-outline/70" placeholder="搜索蕲春好物" type="text"/>
+</div>
+</section>
+<!-- Activity Banner -->
+<section class="mb-8 relative overflow-hidden rounded-3xl bg-surface-container-highest h-48 flex items-center shadow-sm">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-highest via-transparent to-transparent z-10"></div>
+<div class="relative z-20 pl-6 w-1/2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 block">匠心推荐</span>
+<h2 class="font-headline text-xl font-bold text-on-surface leading-tight mb-2">李郎中<br/>好物荟萃</h2>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-md transform active:scale-95 transition-transform">
+                    立即探索
+                </button>
+</div>
+<img alt="Q版李时珍插画" class="absolute right-0 top-0 h-full w-2/3 object-cover object-contain" data-alt="Cute Q-version old herbalist NPC in workshop illustration" src="https://lh3.googleusercontent.com/aida/ADBb0ugHAJ-9-dHqi-UqOBWQ7Xd2j5DP8gGBaTaMYtsXpthlCQ6D2QNGV9LtPU63VB_b9caS_AAgJjz-rEjTwFJTMnoyy8NXVnEUAe0-fgBD7lpOi-amdzXaE7JGGl1jo2HyUDHx4KH-mgPuUSJNUgTahNAr0n__4KT9kndqbWdKjS3Kn36FKCIWaEMQ3ZGTMGpyIYZe-TMq76NljCoA-HuhwjftOidv6zgFsuWJeUJkFBJ0McYRHDQ5P_u-K8mZkz5WDPwjmrT0Nb-bG0U"/>
+</section>
+<!-- Categories -->
+<section class="mb-8 overflow-x-auto flex gap-6 no-scrollbar pb-2">
+<div class="flex flex-col items-center flex-shrink-0 group">
+<span class="text-sm font-bold text-primary brush-underline">场景推荐</span>
+<div class="mt-1 w-1 h-1 rounded-full bg-primary"></div>
+</div>
+<div class="flex flex-col items-center flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+<span class="text-sm font-medium text-on-surface-variant">传统蕲艾</span>
+</div>
+<div class="flex flex-col items-center flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+<span class="text-sm font-medium text-on-surface-variant">文创礼赠</span>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-2 gap-4" id="product-grid"></section>
+</main>
+<div id="common-bottom-nav"></div>
+<script src="../components/bottom-nav.js"></script>
+<script>
+  const marketProducts = [
+    {
+      name: "三年陈艾柱",
+      originalPrice: 158,
+      couponPrice: 102.4,
+      imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8uP4xlm-m3Y86f5we3XZMBFt3Y_q0PjkotwoP8kUtTntZ95e7SZWdnCLYILF6WRUpRTLnkYlnJ0OwomxF05f6VaJRi7DyjJ7h7wFvrlU1enCWJ5MPwFcf8swg9OoXWo_TZzdUcRMQdt9YmRXjDqHMY7YLfI1XWPRlSpYu2kRi3bjPA6san6Egkx4GAJ-hO09lWQ6vW8NeI4QVGNUpxA7hyOL8VCBf-HapEFCZ4AFsqjH1RMAWPqv0QFqwIH7DNrxexY4IsO6A4Jve",
+      alt: "Aged Mugwort Pillars",
+      dataAlt: "Q-version aged mugwort pillars product image",
+      imageClass: "w-full aspect-square object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500",
+      topOffset: "",
+      favorite: true,
+    },
+    {
+      name: "蕲艾精油",
+      originalPrice: 88,
+      couponPrice: 64,
+      imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuBupWbWCqt_ndTwm9JIzFrPJfCE9QhBxjUimGtvgj-iJpeB9PYG7h4hc-VYYZw8HX6KQhwxCz7m53HHp6eLwToAAKUjrqd-CXkdV-m1FzUgyZBLhOm0kDW7IW2qIe27uVNQT90dJv-PQJZJuYgQGFcySFjnfCKcPoVFrzg-pSDdiEgs_Lqjx9k-Td9qNVhL0E7-8QQZrZfI5WEl5XBxWaBhkMuPST6e4sCZU3J-HMaF0A_6H9uPvM0wxdi7bC_Sz3Slvu0czmPUmp3h",
+      alt: "Mugwort Essential Oil",
+      dataAlt: "Q-version mugwort essential oil bottle illustration",
+      imageClass: "w-full aspect-[4/5] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500",
+      topOffset: " mt-4",
+      favorite: false,
+    },
+    {
+      name: "李时珍IP文创周边",
+      originalPrice: 129,
+      couponPrice: 99,
+      imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuDXzLDcMw8ksuiLmdE_-JWdtCix58W0BgHc1bMMsrQg1jcmvzgHlYdH5ku1KUCM2easZKdr7GIPcDtvZfKBkfUCaZdp9dgeJlo-u5wyKcaW89QHMLlaq-FQcrt5nPMTrdjT2Hnhcu5XgrRvSs589jS62ofB7iBmQbabFoEBjXgZ7kP1hK_jtXjCj86R-PByqcjSMclFvklwotxoUpPLL_H721Sfe1lYdRME81t8D3rc6MEyGndk9WiWOBB6PLTBomlJZdwSxzmlUhbA",
+      alt: "Li Shizhen IP Souvenirs",
+      dataAlt: "Q-version Li Shizhen IP cultural souvenir toy",
+      imageClass: "w-full aspect-[3/4] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500",
+      topOffset: "",
+      favorite: false,
+    },
+    {
+      name: "蕲艾养生茶",
+      originalPrice: 45,
+      couponPrice: 32,
+      imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuDWCDA6C1bLdCo_T2prrs9LC7uGJl1xUQtDf8oJ-K4mnoQz-syamgv64WXR9UP5HM-Haj4A0inoAuQ1AZqY4NHb9zX92y72hICUipGKAfc3i6QnXyt5PsfuFFGLtQ-_eereh6AejvfZIT0Dp9uB9EHFueiXIx4hozMM8NgAgMGIuuqXXMvErpzNWItNoAnKtsqVVar_zduEJ10HOypJUqVIMhGxlAo8f8S-VODrproORZ2HqRBhfav2vkDF6Wg_ouxU6bzptCrD6O3t",
+      alt: "Mugwort Tea",
+      dataAlt: "Q-version herbal mugwort tea package",
+      imageClass: "w-full aspect-square object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500",
+      topOffset: " mt-4",
+      favorite: false,
+    },
+  ];
+
+  const productGrid = document.getElementById("product-grid");
+  if (productGrid) {
+    productGrid.innerHTML = marketProducts
+      .map(
+        (item, index) => `
+      <button class="flex flex-col text-left w-full${item.topOffset}" data-product-index="${index}" type="button">
+        <div class="organic-radius bg-surface-container-lowest p-3 mb-2 shadow-[0_8px_20px_-4px_rgba(62,104,66,0.06)] overflow-hidden relative group">
+          <img alt="${item.alt}" class="${item.imageClass}" data-alt="${item.dataAlt}" src="${item.imageSrc}"/>
+          ${
+            item.favorite
+              ? `<div class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm p-1.5 rounded-full shadow-sm">
+            <span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">favorite</span>
+          </div>`
+              : ""
+          }
+        </div>
+        <h3 class="font-headline text-sm font-bold text-on-surface px-1 mb-1">${item.name}</h3>
+        <div class="flex items-center gap-2 px-1 mb-1">
+          <span class="text-[10px] text-outline line-through">¥${item.originalPrice.toFixed(1)}</span>
+          <div class="bg-tertiary-container/30 px-2 py-0.5 rounded-md">
+            <span class="text-[10px] font-bold text-tertiary">券后 ¥${item.couponPrice.toFixed(1)}</span>
+          </div>
+        </div>
+      </button>
+    `
+      )
+      .join("");
+
+    productGrid.querySelectorAll("[data-product-index]").forEach((card) => {
+      card.addEventListener("click", () => {
+        const index = Number(card.getAttribute("data-product-index"));
+        const selected = marketProducts[index];
+        if (!selected) return;
+        sessionStorage.setItem("selectedMarketProduct", JSON.stringify(selected));
+        window.location.href = "./detail.html";
+      });
+    });
+  }
+
+  window.renderBottomNav("#common-bottom-nav", "market");
+</script>
+</body></html>

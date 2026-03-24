@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#fcb2c7",
+              "on-surface": "#221b0f",
+              "surface-container-highest": "#efe0cd",
+              "primary": "#3e6842",
+              "on-primary-fixed": "#002107",
+              "surface-container": "#fbecd8",
+              "outline": "#727970",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#424940",
+              "on-tertiary-container": "#683344",
+              "surface-variant": "#efe0cd",
+              "on-tertiary-fixed-variant": "#6c3647",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fff8f3",
+              "primary-container": "#8fbc8f",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#a4d2a4",
+              "primary-fixed": "#bfefbe",
+              "inverse-on-surface": "#feefdb",
+              "tertiary-fixed": "#ffd9e2",
+              "on-secondary-fixed-variant": "#2c4c4c",
+              "background": "#fff8f3",
+              "secondary-container": "#c6e9e9",
+              "secondary-fixed-dim": "#abcdcd",
+              "on-error-container": "#93000a",
+              "on-background": "#221b0f",
+              "surface-container-low": "#fff2e1",
+              "tertiary-container": "#e49db1",
+              "surface": "#fff8f3",
+              "surface-tint": "#3e6842",
+              "outline-variant": "#c2c9be",
+              "surface-dim": "#e6d8c5",
+              "secondary": "#446464",
+              "on-primary-container": "#234c29",
+              "inverse-surface": "#372f22",
+              "secondary-fixed": "#c6e9e9",
+              "inverse-primary": "#a4d2a4",
+              "on-tertiary-fixed": "#370b1c",
+              "surface-container-high": "#f5e6d2",
+              "on-primary-fixed-variant": "#274f2c",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "tertiary": "#874d5f",
+              "on-secondary-fixed": "#002020",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#4a6a6a"
+            },
+            fontFamily: {
+              "noto-serif": ["Noto Serif SC", "serif"],
+              "manrope": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.parchment-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBe6xcm7J-vwjfxXs1_5GW1PsbwwOEPjFDIp4UqS78EXKZvOm5MeXhyONXp7rbXakQwUegMfVKNR8BI5QxdILclGr9wBsXGEnoHkMW2nHpOhyx1866ZKv5TkmV7t6mzyI3i95rd9vQd2Jlfx8pxGXXvm20UADOEZXWZke6aPfspZ1g6d93vDUeRxrWxdy5CKo7HyCSO37kdApxYi-G8yFQs4XFeW8aMDLK2GXx-TKTejdpfRFT5UHsXvxTlOEGMOC5B_BU3dsECUGDU)
+    }
+.glass-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px)
+    }
+.brush-stroke-underline {
+    position: relative
+    }
+.brush-stroke-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(62, 104, 66, 0.2);
+    border-radius: 100%;
+    filter: blur(2px)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-manrope text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 py-3 bg-[#fff8f3]/70 dark:bg-[#1a1c19]/70 backdrop-blur-md shadow-[0_4px_32px_rgba(62,104,66,0.05)] z-50">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:scale-95 duration-200 hover:bg-[#8fbc8f]/10">
+<span class="material-symbols-outlined text-[#3e6842]">arrow_back</span>
+</button>
+<h1 class="text-lg font-noto-serif font-black text-[#3e6842] dark:text-[#8fbc8f]">乡遇蕲春 - 古法工坊</h1>
+</div>
+<div class="px-4 py-1.5 bg-surface-container-high rounded-full border border-primary/10 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-[#3e6842]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-sm font-bold text-[#3e6842]">1280 积分</span>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="relative min-h-screen pt-16 pb-32 overflow-hidden parchment-texture">
+<!-- Workshop Background Scene -->
+<div class="absolute inset-0 z-0">
+<!-- Medicine Cabinets & Environment Illustrations -->
+<div class="absolute top-20 left-4 right-4 h-[400px] opacity-40 mix-blend-multiply">
+<img alt="Detailed Chinese medicine cabinet with labels" class="w-full h-full object-cover rounded-[2rem]" data-alt="Traditional Chinese medicine cabinet with wooden drawers and herb labels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6gFlCFnztNjeN-PNV-un9wEv8Ifer78vE-yzHWMXP_66W0zxSQMElF196KEajN1V8VVorcw4_wFRUzbQ1TKvtM6gmYdYNDPoQ2xw-3js2wBoR_bG7WyeOU7d9cNpDUtOB_JSiaj5JNJWGWZQIS10ntwVE_hlTu5FAsKvILSOgid2XXCCcbKf6lRejv20ZTHl0w6ziGezR9b_TEPTbhrESBeYLA2iTqReqfFIf-c2S3Muu6TcEujsN1tYDlxEQJ_lpZtryPYTUmpla"/>
+</div>
+<!-- Layered Gradient Overlays -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background"></div>
+</div>
+<!-- NPC Character Section -->
+<section class="relative z-10 flex flex-col items-center pt-10">
+<div class="relative w-64 mb-4 h-48">
+<!-- Floating decorative herb elements -->
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-primary-container/30 rounded-full blur-xl"></div>
+<div class="absolute top-10 -right-2 w-16 h-16 bg-tertiary-container/20 rounded-full blur-xl"></div>
+<!-- Q-version Old Herbalist NPC -->
+<img alt="Q-version friendly white-bearded herbalist" class="w-full h-full object-contain drop-shadow-2xl" data-alt="Q-version friendly white-bearded herbalist NPC holding a wooden pestle" src="https://lh3.googleusercontent.com/aida/ADBb0uj34Tf6Jp68x8IpbYvnNCV-4c1f43m-dnlRQN1AK2LV0C3uxq5wq1WUW8IjhsWpe5JvNApUlX01UIicQffjXHAA1Fd-I8hKyAY5J6yua0zgeli2OkPtuYYVd9hHfAwv71m02qfEHL0X1gntUC2IjsI26gnAqROFTSLGfdh52BCONMsuuitzJ9X2a0ecK-GxbdTH4fyhtlmrwydaoATm_9NA13CnFcTR7QNLD1HP5da0nUpGhkYykHGTNJD_x79wm76rnBHie4ctxg"/>
+<!-- Baicao Tang Sign Placeholder -->
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-surface-container-lowest/90 px-4 py-1 rounded-lg shadow-sm border border-primary/5">
+<span class="font-noto-serif font-black text-xs text-primary tracking-widest">百草堂 · 蕲艾</span>
+</div>
+</div>
+<!-- Dialogue Box -->
+<div class="mx-6 p-6 glass-panel bg-surface/80 rounded-[2rem] border border-white/40 shadow-xl relative">
+<!-- Dialogue Pointer -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-surface/80 rotate-45 border-l border-t border-white/40"></div>
+<p class="text-on-surface font-noto-serif text-lg leading-relaxed text-center">
+                    年轻人，快来协助我！这<span class="text-primary font-bold">‘古法艾柱’</span>的炮制复杂，请按正确工序排列以下步骤吧。
+                </p>
+</div>
+</section>
+<!-- Interactive Game Area -->
+<section class="relative z-10 mt-8 px-6">
+<!-- Step Cards -->
+<div class="grid grid-cols-3 gap-3 mb-8" id="step-cards">
+<!-- Card 1 -->
+<div class="group relative flex flex-col items-center p-3 bg-surface-container-low rounded-2xl border-2 border-transparent hover:border-primary/20 hover:shadow-lg transition-all duration-300 active:scale-95 cursor-pointer" data-step="step1">
+<div class="w-full aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-inner flex items-center justify-center">
+<img alt="Harvest and dry herb icon" class="w-full h-full object-cover" data-alt="Cartoon style dried mugwort leaves in a bamboo basket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfhnIFJCDt4sooqjylrZnO17fQEyDxg9ieLvP-x_fADIMoOerRU6gBp-VA_qRwK11UTM7bggPXZ72JcwjaQiSs6sJWVQrhyrsQjTb-begs9-ZlV8gFOkolxYU4csygdRctOgri2Jzo7XblY907pxwB7TkFTTOEkq0CAwHpBfsdlp4SRfj_UHvo_gpx2FXo3nJHrDxzbPN3RedzZRFQzNaQ5fl3biU8WyBrlkj3mdH2FBpSL-kZcXgcwXTP5ZEwztMQbcdY4D-j1tyf"/>
+</div>
+<span class="text-sm font-bold text-on-surface-variant font-noto-serif">采摘晒干</span>
+<div class="order-badge absolute -top-2 -right-2 w-6 h-6 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center text-[10px] font-bold shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col items-center p-3 bg-surface-container-low rounded-2xl border-2 border-transparent hover:border-primary/20 hover:shadow-lg transition-all duration-300 active:scale-95 cursor-pointer" data-step="step2">
+<div class="w-full aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-inner flex items-center justify-center">
+<img alt="Crush and refine herb icon" class="w-full h-full object-cover" data-alt="Cartoon style wooden pestle and mortar processing herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN_4AA-66CTFiaiBLLjk0STSSVP8DBdxhc0PCm8OXVYAR1RosvHzRonTAH0QfqCVuabBbxfhGgkyVCy0vvld4pLHu5fiTj6MKHqCl6ekc06gUEpIudB2qlm4Go2nLlPU9Ul6dM_kDCEwOdkOT7AfyJ45FHho1gQAgW0rrCr8euy_GDrPzKa1GPXCVevWLyPb1boYZIgBut4mGy3xL6hvvyz3dRN98f6VRvXifCRVhOAqbGlh-Jq7dwzmCMj06exiTfPvN9nMZ2q0Kt"/>
+</div>
+<span class="text-sm font-bold text-on-surface-variant font-noto-serif">捣绒去杂</span>
+<div class="order-badge absolute -top-2 -right-2 w-6 h-6 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center text-[10px] font-bold shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col items-center p-3 bg-surface-container-low rounded-2xl border-2 border-transparent hover:border-primary/20 hover:shadow-lg transition-all duration-300 active:scale-95 cursor-pointer" data-step="step3">
+<div class="w-full aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-inner flex items-center justify-center">
+<img alt="Roll into pillar icon" class="w-full h-full object-cover" data-alt="Cartoon style hand rolling a traditional moxa stick" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNiHmQ5w-7ri0U79FU23xP5qxSH1PQsiqTmvDB4_iXyB0H9_TSYTOeoW84MoicfdaARvp0oSF5zPvWZrdW1dt4cXc489yKpoSkpDFbGjJ0WflWDTC4P5sl5qJ9Temf3T4KxYACqWxFn93oaWaD8BVEi2duJnb57H2d3Nn15yYBb7JhEedZ88u5AQNAaFKnSj5REWls0cp7nzNTDXmAu6WecibCfB1rSTC51C_zq7z0XXVBPPpcstxVJXYXBSNzsmzca0Ir1g4KXo2S"/>
+</div>
+<span class="text-sm font-bold text-on-surface-variant font-noto-serif">卷制成柱</span>
+<div class="order-badge absolute -top-2 -right-2 w-6 h-6 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center text-[10px] font-bold shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<!-- Confirm Button -->
+<div class="flex justify-center px-8">
+<button class="w-full h-16 bg-gradient-to-tr from-[#3e6842] to-[#8fbc8f] rounded-full shadow-[0_8px_0_#2d4d31] active:shadow-none active:translate-y-1 transition-all flex items-center justify-center gap-3" id="confirm-sort-btn">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-white font-noto-serif text-xl font-black tracking-widest">确认排序</span>
+</button>
+</div>
+<p class="mt-4 text-center text-xs text-primary font-semibold min-h-[18px]" id="sort-result-message"></p>
+<div class="mt-5 grid grid-cols-2 gap-3 px-8 hidden" id="reward-actions">
+<a class="flex items-center justify-center h-11 rounded-full bg-primary text-white text-sm font-bold shadow-md active:scale-95 transition-transform" href="../order_confirmation/code.html">
+                    使用优惠券
+                </a>
+<a class="flex items-center justify-center h-11 rounded-full border border-primary/30 text-primary text-sm font-bold bg-white/70 active:scale-95 transition-transform" href="../_3/code.html">
+                    查看工艺故事
+                </a>
+</div>
+<p class="mt-6 text-center text-on-surface-variant text-xs opacity-60 font-medium">长按卡片可自由拖拽排序</p>
+</section>
+<!-- Decorative Foreground Items -->
+<div class="absolute bottom-24 left-0 w-32 h-32 opacity-80 pointer-events-none">
+<img alt="Traditional copper scale" class="w-full h-full object-contain -rotate-12" data-alt="Illustration of a traditional Chinese copper medicine scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzvO-sdlnzfVhFJl30c__UdFILFhsIi3Zc2Adztiz2y4_KM9tuw5IQdpsxq1bKUttRWigseM5ThTjI0qyPfjN4pIAA4OE-1FPFwQbD9bqBqVeXnGzalfZSTYD2O-iJh5D7aOXB0728_S765YD5xyArjbRQRAaX0WtlCKCU3dnQ5gEqN4V75nJHT9Ar4652r9FfYF_V51hGIF2RvtlWdGY4Y1HCJrj1rVD7sW4_1_2L75n0Dom5tnnV8qPqLkV_bMMVwPtkad5T3HU6"/>
+</div>
+<div class="absolute bottom-32 right-0 w-24 h-48 opacity-90 pointer-events-none">
+<img alt="Colored glass medicine bottles" class="w-full h-full object-contain" data-alt="Old fashioned glass medicine bottles on a wooden shelf corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIcEFpVrnMpFdy_Um5Wf54ebu9UfdBHxLRiUwmKRJtI0JrhgK7q5XAI0yDiZHY6UGkE7PkYj9lvhVUsHTw2wX_TI-zXe4Mrcs9BCw_wuWOBgRFxxXCmSpfYlBIGR3Sl7kMGrE_CybodXgwf-O1_YIMM8kGirTaxzGaRoh0iaJ-OlocDftLbnUpyeEC4eRNsPvleXaQ_WIZt-l0Ns5af1Fev4j2gbt6loFdJA7aF6e46RaUoWoanBllrEoqiUjcFI9zrxd3qQdcuTf5"/>
+</div>
+</main>
+<div id="common-bottom-nav"></div>
+<script src="../components/bottom-nav.js"></script>
+<script>
+  window.renderBottomNav("#common-bottom-nav", "encounter");
+
+  const stepCards = Array.from(document.querySelectorAll("#step-cards [data-step]"));
+  const confirmSortBtn = document.getElementById("confirm-sort-btn");
+  const sortResultMessage = document.getElementById("sort-result-message");
+  const rewardActions = document.getElementById("reward-actions");
+  const selectedOrder = [];
+  const correctOrder = ["step1", "step2", "step3"];
+
+  function refreshCardStates() {
+    stepCards.forEach((card) => {
+      const step = card.dataset.step;
+      const orderIndex = selectedOrder.indexOf(step);
+      const badge = card.querySelector(".order-badge");
+      if (!badge) return;
+      if (orderIndex >= 0) {
+        badge.textContent = String(orderIndex + 1);
+        badge.classList.remove("opacity-0", "group-hover:opacity-100");
+        card.classList.remove("border-transparent");
+        card.classList.add("border-primary/40", "bg-primary/5");
+      } else {
+        badge.textContent = "";
+        badge.classList.add("opacity-0", "group-hover:opacity-100");
+        card.classList.remove("border-primary/40", "bg-primary/5");
+        card.classList.add("border-transparent");
+      }
+    });
+  }
+
+  stepCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const step = card.dataset.step;
+      const existingIndex = selectedOrder.indexOf(step);
+      if (existingIndex >= 0) {
+        selectedOrder.splice(existingIndex, 1);
+      } else if (selectedOrder.length < 3) {
+        selectedOrder.push(step);
+      }
+      sortResultMessage.textContent = "";
+      rewardActions.classList.add("hidden");
+      refreshCardStates();
+    });
+  });
+
+  confirmSortBtn?.addEventListener("click", () => {
+    if (selectedOrder.length !== 3) {
+      sortResultMessage.textContent = "请先按顺序点选完 3 个工序卡片。";
+      rewardActions.classList.add("hidden");
+      return;
+    }
+
+    const isCorrect = selectedOrder.every((step, index) => step === correctOrder[index]);
+    if (isCorrect) {
+      sortResultMessage.textContent = "回答正确，已解锁优惠券与工艺故事。";
+      rewardActions.classList.remove("hidden");
+      window.setTimeout(() => {
+        window.location.href = "../_2/code.html";
+      }, 700);
+    } else {
+      sortResultMessage.textContent = "排序不正确，请重试。";
+      rewardActions.classList.add("hidden");
+    }
+  });
+
+  refreshCardStates();
+
+  const backBtn = document.querySelector("header .material-symbols-outlined");
+  if (backBtn && backBtn.textContent.trim() === "arrow_back") {
+    backBtn.closest("button")?.addEventListener("click", () => {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "../_1/code.html";
+      }
+    });
+  }
+</script>
+</body></html>

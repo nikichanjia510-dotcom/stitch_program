@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#874d5f",
+              "primary-fixed": "#bfefbe",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#abcdcd",
+              "on-primary-fixed": "#002107",
+              "primary": "#3e6842",
+              "on-secondary-container": "#4a6a6a",
+              "inverse-primary": "#a4d2a4",
+              "on-primary-fixed-variant": "#274f2c",
+              "secondary-fixed": "#c6e9e9",
+              "on-tertiary-container": "#683344",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#2c4c4c",
+              "on-primary": "#ffffff",
+              "secondary": "#446464",
+              "on-tertiary-fixed": "#370b1c",
+              "primary-fixed-dim": "#a4d2a4",
+              "inverse-surface": "#372f22",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#fff2e1",
+              "outline-variant": "#c2c9be",
+              "surface-container-high": "#f5e6d2",
+              "outline": "#727970",
+              "error-container": "#ffdad6",
+              "surface-bright": "#fff8f3",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#ffd9e2",
+              "secondary-container": "#c6e9e9",
+              "on-surface": "#221b0f",
+              "tertiary-container": "#e49db1",
+              "on-primary-container": "#234c29",
+              "surface-container": "#fbecd8",
+              "primary-container": "#8fbc8f",
+              "inverse-on-surface": "#feefdb",
+              "error": "#ba1a1a",
+              "surface-dim": "#e6d8c5",
+              "on-background": "#221b0f",
+              "background": "#fff8f3",
+              "on-tertiary-fixed-variant": "#6c3647",
+              "surface-container-highest": "#efe0cd",
+              "on-surface-variant": "#424940",
+              "surface-variant": "#efe0cd",
+              "on-secondary-fixed": "#002020",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#3e6842",
+              "surface": "#fff8f3",
+              "tertiary-fixed-dim": "#fcb2c7"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif SC", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "3xl": "2.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+    .scroll-mask {
+        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent)
+    }
+    .paper-texture {
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDquH1y1ZBnV80kD3lVr-YSg6qvtU_3aWy-iJttYMKchi_0i8G_zNMHwGUxK7_6V3WxNXWQoZx3XKaOc82EDLQcTXlk08dV0kfP_9c74AtTo0CjVihzVLjZuRsaYN92KpiQxK1T3ziCnLAG7clSbGaaktyeOXPRTfWKbWgUlspAePbnvwYcqL75R4XaAqRArvX9C-xPRCYnFu8wpc4KGhR4Ue2eQcvXROyQOM_Wx83uWJhK7mT5Jqy_sK4rkHtGlmomK_vGBRJ383lV);
+        background-blend-mode: multiply;
+    }
+    .ink-bleed {
+        filter: blur(0.4px) contrast(1.1)
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .soft-gradient-bg {
+        background: linear-gradient(180deg, #fff8f3 0%, #fbecd8 100%);
+    }
+    </style>
+</head>
+<body class="soft-gradient-bg text-on-surface font-body selection:bg-primary-container/30 overflow-x-hidden paper-texture">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md border-b border-primary/5 flex items-center px-6 h-16">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-primary/5 transition-colors duration-300 active:scale-95">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline font-black text-lg tracking-wide text-primary">匠心纪事</h1>
+</div>
+</header>
+<main class="pt-24 pb-36 px-6 max-w-4xl mx-auto space-y-12">
+<!-- Classical Scroll Visual Area -->
+<section class="relative py-4">
+<div class="relative flex justify-center items-center">
+<div class="bg-surface-container-low rounded-2xl p-1.5 shadow-sm border border-primary/10 overflow-hidden w-full aspect-[4/3] md:aspect-[21/9] relative">
+<img class="w-full h-full object-cover rounded-xl opacity-90 mix-blend-multiply filter sepia-[0.1]" data-alt="Exquisite illustration of an ancient mugwort warehouse with sunlight streaming through wooden windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhR1DdizteB2oNm8RStIqwU7wf3fb0i8RqB3H-SCVFfVrI734YX2cv1Ps09d5vVRUjO5MX0or22NW3Lbf-n4oXxQpvWBAeipa1GslX-ijFvCT4e9BXdwd0lWYdXaLK-B2q56t9A-2boM-h4VNw-4_mwdC4pZcdQHhWi4fu3FzC_0ZS10rWKeEt-tMN4oPqIsALPtJoI-pVUxwPFn5XPlpGF_fQO7Yr4yZRiD8WjMhj_II3ILOHiA838OZcZv3Kb_qbx8DC0rsuLTkD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/30 to-transparent"></div>
+<!-- Decorative Corner Stamps -->
+<div class="absolute top-4 right-4 w-12 h-12 border border-tertiary/20 rounded-sm flex items-center justify-center text-tertiary/40 font-headline text-[10px] leading-tight text-center p-1 bg-white/20 backdrop-blur-[2px]">
+                        蕲春<br/>非遗
+                    </div>
+</div>
+</div>
+</section>
+<!-- Story Text Area -->
+<section class="space-y-10 px-4 md:px-12 text-center">
+<div class="space-y-4">
+<span class="text-primary/60 font-headline tracking-[0.3em] text-xs uppercase">岁月沉淀 · 匠心传承</span>
+<h2 class="text-3xl md:text-4xl font-headline font-black text-on-surface leading-snug ink-bleed">
+                    三载光阴，<br class="md:hidden"/>
+                    方得一缕艾香
+                </h2>
+</div>
+<div class="prose prose-stone max-w-none">
+<p class="text-lg md:text-xl text-on-surface-variant font-headline font-medium leading-[2.2] tracking-wider opacity-90">
+                    一株蕲艾历经三年光阴沉淀，<br/>
+                    在幽静的仓储中自然陈化，<br/>
+                    方能逐渐褪去初生时的燥烈之气。<br/>
+                    这是时光与自然的默契，<br/>
+                    是唯有蕲春土地方能孕育出的温润平衡。<br/>
+                    由此而成的温经通络良品，<br/>
+                    承载着千年非遗的守护与智慧。
+                </p>
+</div>
+<!-- Decorative Elements -->
+<div class="flex justify-center items-center gap-8 pt-8 opacity-70">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-2 text-xl">history_edu</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">三载陈放</span>
+</div>
+<div class="h-6 w-[1px] bg-primary/20"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-2 text-xl">nature_people</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">道地药材</span>
+</div>
+<div class="h-6 w-[1px] bg-primary/20"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-2 text-xl">verified</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">匠心工艺</span>
+</div>
+</div>
+</section>
+<!-- Details Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container/40 rounded-3xl p-8 flex flex-col justify-between aspect-square md:aspect-video border border-primary/5 hover:bg-surface-container/60 transition-colors duration-500">
+<div>
+<h3 class="font-headline text-xl font-black text-on-surface">仓库秘境</h3>
+<p class="text-on-surface-variant text-sm mt-2 font-medium opacity-80">恒温恒湿的木质空间，是蕲艾最好的归宿。</p>
+</div>
+<div class="mt-6 flex-grow overflow-hidden rounded-2xl shadow-sm border border-white/40">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" data-alt="Sunlight hitting stacked herbal bundles in a wooden interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhbGDiGJ2f5rjK9mqpRN8FEC1V9YOaCzrqs8myXM3jMMYqpt-Pwoh7ioxBcsMhWxCIeGKuayzOCrbkQdJSocBagaSOi2a6z4yyBZxGWyjb468LCyuuHmYjw1Af3NDtYEwLf_4bxH61KjeaYccVfsxBMjpK5JvXXeL_JY1opVMojnxjJx7tKxMXoCT2t-q2EcCAhgoc9l3J12ICgDLLtycGWBaeOAdahYRGVlfAIGjDqJYfs8BhkL_rVYuTx74o5HX9nQlZ15JGXWgU"/>
+</div>
+</div>
+<div class="bg-primary/5 rounded-3xl p-8 flex flex-col justify-between border border-primary/10">
+<div>
+<h3 class="font-headline text-xl font-black text-primary">匠人手记</h3>
+<p class="text-on-surface-variant text-sm mt-3 italic font-medium leading-relaxed opacity-90">“艾之火，温暖的是经络，守住的是文化。”</p>
+</div>
+<div class="mt-8 flex items-center gap-4 bg-white/60 p-4 rounded-2xl backdrop-blur-sm shadow-sm border border-white/80">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person_pin</span>
+</div>
+<div>
+<p class="font-headline font-bold text-sm text-on-surface">非遗传承人 · 李师傅</p>
+<p class="text-[10px] text-primary/70 font-label uppercase tracking-widest font-bold">蕲艾炮制工艺专家</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div id="common-bottom-nav"></div>
+<!-- Visual Polish: Top/Bottom Shades -->
+<div class="fixed top-0 left-0 w-full h-24 bg-gradient-to-b from-background to-transparent pointer-events-none z-40 opacity-40"></div>
+<div class="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent pointer-events-none z-40 opacity-60"></div>
+<script src="../components/bottom-nav.js"></script>
+<script>
+  window.renderBottomNav("#common-bottom-nav", "encounter");
+
+  const backButton = document.querySelector("header button");
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "../npc/code.html";
+      }
+    });
+  }
+</script>
+</body></html>

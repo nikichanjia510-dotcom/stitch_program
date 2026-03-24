@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3e6842",
+              "inverse-primary": "#a4d2a4",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#abcdcd",
+              "secondary-fixed": "#c6e9e9",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#234c29",
+              "tertiary-fixed-dim": "#fcb2c7",
+              "tertiary-container": "#e49db1",
+              "tertiary": "#874d5f",
+              "primary-fixed-dim": "#a4d2a4",
+              "surface-container-high": "#f5e6d2",
+              "on-tertiary-fixed": "#370b1c",
+              "tertiary-fixed": "#ffd9e2",
+              "surface-bright": "#fff8f3",
+              "surface-dim": "#e6d8c5",
+              "on-primary-fixed-variant": "#274f2c",
+              "error-container": "#ffdad6",
+              "secondary": "#446464",
+              "secondary-container": "#c6e9e9",
+              "inverse-on-surface": "#feefdb",
+              "outline": "#727970",
+              "surface-container": "#fbecd8",
+              "on-surface": "#221b0f",
+              "on-secondary-fixed-variant": "#2c4c4c",
+              "surface-variant": "#efe0cd",
+              "on-secondary-container": "#4a6a6a",
+              "primary-fixed": "#bfefbe",
+              "on-background": "#221b0f",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#002020",
+              "inverse-surface": "#372f22",
+              "surface-tint": "#3e6842",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#002107",
+              "surface-container-low": "#fff2e1",
+              "background": "#fff8f3",
+              "on-tertiary-fixed-variant": "#6c3647",
+              "surface": "#fff8f3",
+              "on-tertiary-container": "#683344",
+              "surface-container-highest": "#efe0cd",
+              "on-error": "#ffffff",
+              "outline-variant": "#c2c9be",
+              "primary-container": "#8fbc8f",
+              "on-surface-variant": "#424940"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif SC", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            animation: {
+              'glow-pulse': 'glow-pulse 3s infinite ease-in-out',
+            },
+            keyframes: {
+              'glow-pulse': {
+                '0%, 100%': { boxShadow: '0 0 10px 2px rgba(62, 104, 66, 0.3)' },
+                '50%': { boxShadow: '0 0 25px 8px rgba(62, 104, 66, 0.6)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+}
+.parchment-texture {
+    background-color: #fff8f3;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCoZ6bY6ZdcKZImjeJN7qL-1geiIgaSmZuE1oF4lnGTPrejnz-ecZjf_HRizrBRs7pqkOuWQerpQMDzwe32AmdxGELfu3EvO2e188TGs8sthYhuq15yaKZ21x094mybHHNxbgH1xRkDVd8zDimKTzsTpNb_TYCIM3z_UfYsm_XYjnXr5hLw2jXkVEjK5oyTojsBVVdIo8m-e0-6g6OGILmHndIFmm_8y0ymROcTjQ6SFSTttiNz1HrZjQuW3AqDP-6N_3Pm7YzzEc_1);
+}
+.glow-node {
+    animation: glow-pulse 3s infinite ease-in-out;
+    border-radius: 50%;
+}
+.map-hotspot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    min-width: 74px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(62, 104, 66, 0.28);
+    background: rgba(255, 248, 243, 0.86);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #3e6842;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    box-shadow: 0 8px 24px rgba(62, 104, 66, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+}
+.map-hotspot:hover {
+    transform: translate(-50%, -50%) scale(1.04);
+    box-shadow: 0 10px 26px rgba(62, 104, 66, 0.22);
+    background: rgba(255, 248, 243, 0.96);
+}
+.map-hotspot .material-symbols-outlined {
+    font-size: 16px;
+    font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+}
+.hotspot-workshop {
+    left: 53%;
+    top: 33%;
+}
+.hotspot-aged {
+    left: 67%;
+    top: 52%;
+}
+.hotspot-heritage {
+    left: 50%;
+    top: 78%;
+}
+@media (max-width: 768px) {
+    .hotspot-workshop { left: 56%; top: 36%; }
+    .hotspot-aged { left: 70%; top: 56%; }
+    .hotspot-heritage { left: 50%; top: 74%; }
+    .map-hotspot {
+      min-width: 68px;
+      padding: 7px 9px;
+      font-size: 11px;
+    }
+}
+@media (max-width: 420px) {
+    .hotspot-workshop { left: 58%; top: 37%; }
+    .hotspot-aged { left: 72%; top: 58%; }
+    .hotspot-heritage { left: 50%; top: 72%; }
+}
+body {
+    min-height: max(884px, 100dvh);
+}
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden parchment-texture">
+<!-- Top AppBar: Qichun Tourism Center-Aligned -->
+<header class="fixed top-0 w-full z-50 bg-[#fff8f3]/70 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<button class="text-[#3e6842] hover:bg-[#8fbc8f]/10 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline font-bold text-xl text-[#3e6842] tracking-wide">乡遇蕲春</h1>
+<button class="text-[#3e6842] hover:bg-[#8fbc8f]/10 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Canvas (The Interactive Map) -->
+<main class="relative w-full h-screen overflow-hidden">
+<!-- Full Map Image Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Interactive Travel Map of Qichun" class="w-full h-full object-cover object-center" id="map-image" src="../地图.png"/>
+</div>
+<!-- Interaction Layer: Hotspots -->
+<div class="absolute inset-0 z-10">
+<button class="map-hotspot hotspot-workshop" id="hotspot-workshop" type="button">
+<span class="material-symbols-outlined">workshop</span>
+<span>古法工坊</span>
+</button>
+<button class="map-hotspot hotspot-aged" id="hotspot-aged" type="button">
+<span class="material-symbols-outlined">storefront</span>
+<span>陈年艾柱</span>
+</button>
+<button class="map-hotspot hotspot-heritage" id="hotspot-heritage" type="button">
+<span class="material-symbols-outlined">verified</span>
+<span>非遗守护者</span>
+</button>
+</div>
+<!-- Search Overlay -->
+<div class="absolute bottom-32 left-8 right-8 z-30">
+<div class="bg-surface/80 backdrop-blur-xl rounded-2xl p-4 shadow-xl border border-primary/10 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<div class="flex-1">
+<p class="text-xs text-on-surface-variant font-medium">寻找蕲春秘境</p>
+<p class="text-sm font-headline font-semibold">寻访本草足迹...</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-24 right-6 z-50">
+<button class="w-14 h-14 bg-gradient-to-tr from-primary to-primary-container text-on-primary rounded-full shadow-2xl flex items-center justify-center active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+</button>
+</div>
+<div id="common-bottom-nav"></div>
+<script src="../components/bottom-nav.js"></script>
+<script>
+  window.renderBottomNav("#common-bottom-nav", "roam");
+
+  const mapImage = document.getElementById("map-image");
+  if (mapImage) {
+    mapImage.addEventListener("error", () => {
+      if (!mapImage.dataset.triedLocal) {
+        mapImage.dataset.triedLocal = "1";
+        mapImage.src = "./地图.png";
+      }
+    });
+  }
+
+  document.getElementById("hotspot-workshop")?.addEventListener("click", () => {
+    window.location.href = "../npc/code.html";
+  });
+  document.getElementById("hotspot-aged")?.addEventListener("click", () => {
+    window.location.href = "../_4/code.html";
+  });
+  document.getElementById("hotspot-heritage")?.addEventListener("click", () => {
+    window.location.href = "../order_confirmation/code.html";
+  });
+</script>
+</body></html>
